@@ -1,12 +1,9 @@
-''' mmb36_BreadthFS.py
+'''BreadthFS.py mmb1995
 BreadthFS of a problem space.
- Version 0.4, January 15, 2018.
- Steve Tanimoto, Univ. of Washington.
- Paul G. Allen School of Computer Science and Engineering
 
  Usage:
- python3 mmb36_BreadthFS.py TowersOfHanoi
-# The numbered STEP comments in the function BFS correspond
+ python3 BreadthFS.py TowersOfHanoi
+ # The numbered STEP comments in the function BFS correspond
  to the algorithm steps for breadth first search
 '''
 
@@ -99,6 +96,7 @@ def print_state_list(name, lst):
 
 
 def backtrace(S):
+    """Returns path found by Breadth First Search"""
     global BACKLINKS
     path = []
     while S:
