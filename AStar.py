@@ -1,5 +1,8 @@
 ''' Matthew Blumenschein mmb1995
-Example of the AStar search algorithm
+Example that uses the AStar search algorithm and heuristics to solve the EightPuzzle game
+
+Usage:
+python3 Astar.py EightPuzzleWithHeuristics <heuristic>
 '''
 
 import sys
@@ -21,14 +24,14 @@ else:
                    "h_euclidean": lambda s: s.h_euclidean(), "h_custom": lambda s: s.h_custom()}
         heur = heuristics[h]
     except Exception:
-        print("invalid heuristic.")
+        print("invalid heuristic. Please type in h_manhattan, h_hamming, h_euclidian, or h_custom")
         exit(1)
 
 print("\nWelcome to ItrDFS")
 COUNT = None
 BACKLINKS = {}
 
-
+gio
 def runAStar():
     global Problem
     initial_state = Problem.CREATE_INITIAL_STATE()
@@ -46,8 +49,8 @@ def runAStar():
     print('MAX_OPEN_LENGTH = ' + str(MAX_OPEN_LENGTH))
 
 def isSolvable(S):
-    '''This is only relevant for the eight puzzle as certain initial states have no possibly path to the goal state.
-    This will check the initial state to determine if AStar can find a valid solution
+    '''This will check the initial state to determine if AStar can find a valid solution.
+       This is needed because certain initial states of the EightPuzzle are unsolvable.
     '''
     coord = [(0,0), (0,1), (0, 2), (1,0), (1,1), (1,2), (2,0), (2,1), (2,2)]
     inv_count = 0
