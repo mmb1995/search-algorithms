@@ -1,5 +1,4 @@
 ''' Matthew Blumenschein mmb1995
-mmb36_AStar.py
 Example of the AStar search algorithm
 '''
 
