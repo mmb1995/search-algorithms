@@ -24,14 +24,13 @@ else:
                    "h_euclidean": lambda s: s.h_euclidean(), "h_custom": lambda s: s.h_custom()}
         heur = heuristics[h]
     except Exception:
-        print("invalid heuristic. Please type in h_manhattan, h_hamming, h_euclidian, or h_custom")
+        print("invalid heuristic. Please type in h_manhattan, h_hamming, h_euclidean, or h_custom")
         exit(1)
 
 print("\nWelcome to ItrDFS")
 COUNT = None
 BACKLINKS = {}
 
-gio
 def runAStar():
     global Problem
     initial_state = Problem.CREATE_INITIAL_STATE()
